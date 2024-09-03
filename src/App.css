@@ -1,38 +1,102 @@
+/* 整个应用的全局样式 */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f4f4f4; /* 背景颜色 */
+  color: #333; /* 文本颜色 */
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  position: relative; /* 为了定位Logo */
 }
 
-.App-link {
-  color: #61dafb;
+/* 添加Logo并放置在左上角 */
+.App-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 100px; /* 缩小Logo的高度 */
+  width: auto;  /* 宽度自动调整 */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 网格布局的样式 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 50px); /* 5列，每列50px */
+  grid-template-rows: repeat(5, 50px);    /* 5行，每行50px */
+  gap: 2px; /* 单元格之间的间距 */
+  margin: 10px 0; /* 减小网格和标题之间的间距 */
 }
+
+/* 单个网格单元格的样式 */
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+}
+
+/* 控制按钮区域的样式 */
+.controls {
+  margin: 10px; /* 减小控制区域的外边距 */
+}
+
+/* 按钮样式 */
+.button {
+  background-color: #ffa500; /* 按钮的背景颜色 */
+  border: none; /* 去掉默认的边框 */
+  color: white; /* 按钮的文本颜色 */
+  padding: 8px 16px; /* 减小按钮的内边距 */
+  margin: 5px; /* 减小按钮的外边距 */
+  cursor: pointer; /* 鼠标悬停时显示手型光标 */
+  font-size: 14px; /* 缩小按钮字体大小 */
+  border-radius: 4px; /* 按钮的圆角 */
+  transition: background-color 0.3s ease; /* 鼠标悬停时的背景色变化 */
+}
+
+/* 按钮悬停效果 */
+.button:hover {
+  background-color: #ff8c00; /* 鼠标悬停时的背景颜色 */
+}
+
+.robot {
+  background-color: #ffa500;
+  position: relative; /* 允许绝对定位内部元素 */
+}
+
+.robot .head {
+  position: absolute;
+  background-color: white;
+  width: 10px; /* 线条的宽度 */
+  height: 2px; /* 线条的高度 */
+}
+
+.robot.north .head {
+  top: 5px; /* 线条在顶部表示朝北 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.robot.south .head {
+  bottom: 5px; /* 线条在底部表示朝南 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.robot.east .head {
+  right: 5px; /* 线条在右边表示朝东 */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.robot.west .head {
+  left: 5px; /* 线条在左边表示朝西 */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+
+
