@@ -1,97 +1,97 @@
-/* 整个应用的全局样式 */
+/* Global style for the entire application */
 .App {
   font-family: 'Helvetica Neue', sans-serif;
-  background-color: #f4f4f4; /* 背景颜色 */
-  color: #333; /* 文本颜色 */
+  background-color: #f4f4f4; /* background color */
+  color: #333; /* text color */
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  position: relative; /* 为了定位Logo */
+  position: relative; /* To locate the Logo */
 }
 
-/* 添加Logo并放置在左上角 */
+/* Add the Logo and place it in the top left corner */
 .App-logo {
   position: absolute;
   top: 10px;
   left: 10px;
-  height: 100px; /* 缩小Logo的高度 */
-  width: auto;  /* 宽度自动调整 */
+  height: 100px; /* Reduce the height xf of the Logo */
+  width: auto;  /* Automatic width adjustment */
 }
 
-/* 网格布局的样式 */
+/* Grid layout style */
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 50px); /* 5列，每列50px */
-  grid-template-rows: repeat(5, 50px);    /* 5行，每行50px */
-  gap: 2px; /* 单元格之间的间距 */
-  margin: 10px 0; /* 减小网格和标题之间的间距 */
+  grid-template-columns: repeat(5, 50px); /* 5 columns, 50px each */
+  grid-template-rows: repeat(5, 50px);    /* 5 lines, 50px each */
+  gap: 2px; /* The spacing between cells */
+  margin: 10px 0; /* Reduce the spacing between the grid and the header */
 }
 
-/* 单个网格单元格的样式 */
+/* The style of a single grid cell */
 .cell {
   width: 50px;
   height: 50px;
   border: 1px solid #ccc;
 }
 
-/* 控制按钮区域的样式 */
+/* Controls the style of the button area */
 .controls {
-  margin: 10px; /* 减小控制区域的外边距 */
+  margin: 10px; /* Reduce the margin of the control area */
 }
 
-/* 按钮样式 */
+/* Button style  */
 .button {
-  background-color: #ffa500; /* 按钮的背景颜色 */
-  border: none; /* 去掉默认的边框 */
-  color: white; /* 按钮的文本颜色 */
-  padding: 8px 16px; /* 减小按钮的内边距 */
-  margin: 5px; /* 减小按钮的外边距 */
-  cursor: pointer; /* 鼠标悬停时显示手型光标 */
-  font-size: 14px; /* 缩小按钮字体大小 */
-  border-radius: 4px; /* 按钮的圆角 */
-  transition: background-color 0.3s ease; /* 鼠标悬停时的背景色变化 */
+  background-color: #ffa500; /* The background color of the button */
+  border: none; /* Remove the default border*/
+  color: white; /* The text color of the button */
+  padding: 8px 16px; /* Reduce the inside margin of the button */
+  margin: 5px; /* Reduce the margin of the button */
+  cursor: pointer; /* The hand cursor is displayed when the mouse is hovering */
+  font-size: 14px; /* Reduce the button font size */
+  border-radius: 4px; /* Round corners of buttons */
+  transition: background-color 0.3s ease; /* The background color changes when the mouse is hovering */
 }
 
-/* 按钮悬停效果 */
+/* Button hover effect */
 .button:hover {
-  background-color: #ff8c00; /* 鼠标悬停时的背景颜色 */
+  background-color: #ff8c00; /* The background color when the mouse is hovering */
 }
 
 .robot {
   background-color: #ffa500;
-  position: relative; /* 允许绝对定位内部元素 */
+  position: relative; /* Allows absolute positioning of internal elements */
 }
 
 .robot .head {
   position: absolute;
   background-color: white;
-  width: 10px; /* 线条的宽度 */
-  height: 2px; /* 线条的高度 */
+  width: 10px;
+  height: 2px; 
 }
 
 .robot.north .head {
-  top: 5px; /* 线条在顶部表示朝北 */
+  top: 5px; /*The line at the top is north */
   left: 50%;
   transform: translateX(-50%);
 }
 
 .robot.south .head {
-  bottom: 5px; /* 线条在底部表示朝南 */
+  bottom: 5px; /* The line at the bottom is south */
   left: 50%;
   transform: translateX(-50%);
 }
 
 .robot.east .head {
-  right: 5px; /* 线条在右边表示朝东 */
+  right: 5px; /* The line at the right is east */
   top: 50%;
   transform: translateY(-50%);
 }
 
 .robot.west .head {
-  left: 5px; /* 线条在左边表示朝西 */
+  left: 5px; /* The line on the left is west */
   top: 50%;
   transform: translateY(-50%);
 }
